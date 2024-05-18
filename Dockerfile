@@ -1,11 +1,11 @@
-FROM php:5.6-apache
+FROM php:apache
 
 # Install Dependencies
 RUN apt-get update && apt-get install -y git-core zlib1g-dev && \
     docker-php-ext-install zip
 
 # Install S6
-RUN curl -sL "https://github.com/just-containers/s6-overlay/releases/download/v1.16.0.0/s6-overlay-amd64.tar.gz" \
+RUN curl -sL "https://github.com/just-containers/s6-overlay/releases/download/v3.1.6.2/s6-overlay-x86_64.tar.xz" \
     | tar xz -C /
 
 #Copy php.ini
