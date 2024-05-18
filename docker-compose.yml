@@ -5,16 +5,17 @@ services:
   picocms:
     restart: always
     build: .
-    image: gprevost/picocms
+    image: RevenantHowl/picocms
     command:
       "/run.sh"
     ports:
-      - 80:80
+      - 806:80
     volumes:
       - ./config:/home/sites/picocms/config
       - ./content:/home/sites/picocms/content
       - ./plugins:/home/sites/picocms/plugins
       - ./themes:/home/sites/picocms/themes
+      - ./:/home/sites/picocms
     networks:
       - picocms
 
