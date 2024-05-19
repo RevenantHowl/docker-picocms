@@ -48,7 +48,7 @@ RUN mkdir init
 RUN mv ./themes/ init
 RUN mv ./config/ init
 RUN mv ./plugins/ init
-RUN mv ./ init
+#RUN mv ./ init
 
 EXPOSE 80
 
