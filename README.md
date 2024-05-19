@@ -9,7 +9,7 @@ This is a dockerized version of PicoCMS, a flat file content management system u
 
 Install [Docker](https://docs.docker.com/engine/installation/) and [Docker Compose](https://docs.docker.com/compose/install/).
 
-Retrieve the project from: [https://github.com/guillaumeprevost/docker-picocms](https://github.com/guillaumeprevost/docker-picocms)
+Retrieve the project from: [https://github.com/RevenantHowl/docker-picocms](https://github.com/RevenantHowl/docker-picocms)
 
 ## Usage
 
