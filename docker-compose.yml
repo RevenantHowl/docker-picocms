@@ -5,7 +5,7 @@ services:
   picocms:
     restart: always
     build: .
-    image: RevenantHowl/picocms
+    image: gprevost/picocms
     command:
       "/run.sh"
     ports:
