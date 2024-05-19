@@ -27,13 +27,13 @@ RUN usermod -aG root www-data
 RUN mkdir -p /root/.composer/ && \
    curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
 
-RUN git clone https://github.com/picocms/Pico.git  /home/sites/picocms/
+#RUN git clone https://github.com/picocms/Pico.git  /home/sites/picocms/
 
 WORKDIR /home/sites/picocms/
 
-RUN composer install
+RUN php composer.phar create-project picocms/pico-composer pico
 
-RUN cp ./config/config.php.template ./config/config.php
+#RUN cp ./config/config.php.template ./config/config.php
 
 # Install pico_edit plugin
 RUN mkdir ./plugins/pico_edit
