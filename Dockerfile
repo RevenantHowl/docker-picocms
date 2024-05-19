@@ -1,14 +1,8 @@
-FROM php:7.2-apache
+FROM php:5.6-apache
 
-#install some base extensions
-RUN apt-get install -y \
-        libzip-dev \
-        zip \
-  && docker-php-ext-configure zip --with-libzip \
-  && docker-php-ext-install zip
 # Install Dependencies
-#RUN apt-get update && apt-get install -y git-core zlib1g-dev && \
- #   docker-php-ext-install zip
+RUN apt-get update && apt-get install -y git-core zlib1g-dev && \
+    docker-php-ext-install zip
 
 # Install S6
 RUN curl -sL "https://github.com/just-containers/s6-overlay/releases/download/v3.1.6.2/s6-overlay-x86_64.tar.xz" \
