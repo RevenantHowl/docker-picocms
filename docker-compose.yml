@@ -15,7 +15,7 @@ services:
       - ./content:/home/sites/picocms/content
       - ./plugins:/home/sites/picocms/plugins
       - ./themes:/home/sites/picocms/themes
-      - ./:/home/sites/picocms
+      #- ./:/home/sites/picocms
     networks:
       - picocms
 
