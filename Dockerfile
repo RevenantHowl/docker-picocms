@@ -28,7 +28,7 @@ RUN usermod -aG root www-data
 RUN mkdir -p /root/.composer/ && \
    curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
 
-#RUN git clone https://github.com/picocms/Pico.git  /home/sites/picocms/
+RUN git clone https://github.com/picocms/Pico.git  /home/sites/picocms/
 
 WORKDIR /home/sites/picocms/
 
@@ -48,6 +48,7 @@ RUN mkdir init
 RUN mv ./themes/ init
 RUN mv ./config/ init
 RUN mv ./plugins/ init
+RUN mv ./ init
 
 EXPOSE 80
 
