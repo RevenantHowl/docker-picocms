@@ -32,7 +32,7 @@ RUN git clone https://github.com/picocms/Pico.git  /home/sites/picocms/
 
 WORKDIR /home/sites/picocms/
 
-RUN php composer.phar create-project picocms/pico-composer pico
+RUN cp ./config/config.php.template ./config/config.php
 
 #RUN cp ./config/config.php.template ./config/config.php
 
